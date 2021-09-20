@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package startup;
+option go_package = "git@github.com:tlgevers/mapping-stuff/services/bq";
+
+service FAAAirportData {
+  rpc GetAirportData(RequestCode) returns (Airports) {}
+}
+
+message RequestCode {
+  string code = 1;
+}
+
+message Airport {
+  string code = 1;
+}
+
+message Airports {
+  repeated Airport airports = 1;
+}
