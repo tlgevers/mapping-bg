@@ -13,6 +13,9 @@ message RequestCode {
 
 message Airport {
   string code = 1;
+  string name = 2;
+  float longitude = 3;
+  float latitude = 4;
 }
 
 message Airports {
